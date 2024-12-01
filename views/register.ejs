@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Book Review</div>
+    </nav>
+
+    <div class="login-container">
+        <h1 class="login-title">Register</h1>
+        <form method="POST" action="/register">
+            <input type="text" name="username" placeholder="Username" class="input-field" required />
+            <input type="password" name="password" placeholder="Password" class="input-field" required />
+            <button type="submit" class="btn">Register</button>
+        </form>
+        <p class="signup-text">Already have an account? <a href="/login">Login</a></p>
+    </div>
+</body>
+</html>

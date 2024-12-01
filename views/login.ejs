@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <% if (error && error.length > 0) { %>
+        <div class="flash-message error"><%= error[0] %></div>
+    <% } %>
+
+    <div class="login-container">
+        <h1 class="login-title">Login</h1>
+        <form method="POST" action="/login">
+            <input type="text" name="username" placeholder="Username" class="input-field" required />
+            <input type="password" name="password" placeholder="Password" class="input-field" required />
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <p class="signup-text">Don’t have an account? <a href="/register">Sign up</a></p>
+    </div>
+</body>
+</html>

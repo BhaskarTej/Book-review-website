@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>All Reviews</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Book Review</div>
+        <a href="/logout" class="logout-btn">Logout</a>
+    </nav>
+
+    <div class="reviews-container">
+        <h1 class="reviews-title">All Reviews</h1>
+        <% if (reviews.length > 0) { %>
+            <% reviews.forEach(review => { %>
+                <div class="review-card">
+                    <h2><%= review.title %></h2>
+                    <p><%= review.review %></p>
+                    <small>Reviewed by: <%= review.created_by %></small>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <p class="no-reviews-text">No reviews available. Be the first to write one!</p>
+        <% } %>
+    </div>
+</body>
+</html>

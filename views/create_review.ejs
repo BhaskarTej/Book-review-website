@@ -1,0 +1,25 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Write a Review</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Book Review</div>
+        <a href="/logout" class="logout-btn">Logout</a>
+    </nav>
+
+    <div class="form-container">
+        <h1 class="form-title">Write a Review</h1>
+        <form method="POST" action="/reviews/create">
+            <input type="text" name="title" placeholder="Book Title" class="input-field" required />
+            <textarea name="review" placeholder="Your review here..." class="textarea-field" rows="5" required></textarea>
+            <button type="submit" class="btn">Submit Review</button>
+        </form>
+    </div>
+</body>
+</html>
